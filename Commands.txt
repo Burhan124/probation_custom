@@ -1,0 +1,10 @@
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Burhan124/Probation.git,https://github.com/Burhan124/PHP.git
+git push -u origin main
+
+
+
+
