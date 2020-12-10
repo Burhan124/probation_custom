@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<form id="myForm">
+	<input type="text" name="first_name" placeholder="first name">
+<!-- 	<p style="color: red; display:none;" class="mes">name is required</p> -->
+	<input type="text" placeholder="email" name="email">
+<!-- 	<p style="color: red; display:none;" class="mes">Email is required</p> -->
+	<input type="text" placeholder="subject" name="subject">
+<!-- 	<p style="color: red; display:none;" class="mes">Subject is required</p> -->
+	<input type="text" placeholder="message" name="message">
+<!-- 	<p style="color: red; display:none;" class="mes">Message is required</p> -->
+
+	<select name="countries" id="countries">
+		<option value="">:: Select country ::</option>
+		<option value="pak">Pakistan</option>
+		<option value="ind">Ind</option>
+		<option value="rus">Rusia</option>
+		<option value="tur">Turky</option>
+	</select>
+
+
+	<p class="hide" id="pak"> Karachi, Lahore , Islamabad</p>
+	<p class="hide" id="ind">ABC, BCD, CDB</p>
+	<p class="hide" id="rus">BCA, CBA, CCB</p>
+	<p class="hide" id="tur">BBC, AAB, BBC</p>
+
+	<input type="button" name="submit_btn" onclick="" value="Submit" id="submit">
+</form>
+<script type="text/javascript">
+
+
+$(function() {
+    $("#submit").click(function() {
+        $("#myForm input[type=text]").each(function() {
+            if(!isNaN(this.value)) {
+                alert(this.value + " Field is empty");
+/*           	$('.mes').show();*/
+            }
+        });
+        return false;
+    });
+});
+
+/*	 $("input[name=submit_btn]").click(function(){
+	 	var fields = $("input").val();
+	 	if (!fields) {
+	 		console.log("all fields are required");
+	 	}
+	 })*/
+
+	// $("input[name=submit_btn]").click(function(){
+	// 	var firstName = $("input[name=first_name]").val();
+	// 	if (firstName =='') {
+	// 		alert('First name is required')
+	// 	}
+	// 	var email = $("input[name=email]").val();
+	// 	if (email =='') {
+	// 		alert('email is required')
+	// 	}
+	// 	var subject = $("input[name=subject]").val();
+	// 	if (subject =='') {
+	// 		alert('subject is required')
+	// 	}
+
+	// })
+
+
+
+
+
+
+//	document.getElementById("countries").addEventListener("change", change_cities);
+/*	function change_cities(){
+		// var selectedCountry = document.getElementById("countries").value;
+		// alert(selectedCountry);
+		 if (this.value == 'pak') {
+			document.getElementById("ind-cities").style.display = "none";
+			document.getElementById("pak-cities").style.display = "block";
+		}
+		else if(this.value=='ind'){
+			document.getElementById("pak-cities").style.display = "none";
+			document.getElementById("ind-cities").style.display = "block";
+		}
+	}*/
+function clhide() {
+	var classhidde = document.getElementsByClassName('hide');
+	for (var i = 0; i < classhidde.length; i++) {
+			classhidde[i].style.display = 'none';
+	}
+}
+
+clhide();
+
+document.getElementById("countries").addEventListener("change",clblock);
+function clblock() {
+	clhide();
+	document.getElementById(this.value).style.display= 'block';
+}
+
+
+
+</script>
+</body>
+</html>
