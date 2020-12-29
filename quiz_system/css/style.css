@@ -190,10 +190,23 @@ body{
 	background: white;
 }
 
-.registration_form {
-	display: none;
+/***************** MY CSS ***************/
+
+.contact-info {
+    text-align: center !important;
+}
+
+.contact-info i.fa.fa-question {
+    font-size: 40px;
+    margin: 1% 0;
 }
 
 .login_form {
-	display: none;
-} 
+  display: block; 
+}
+
+.registration_form {
+    display: none;
+}
+
+/***************** MY CSS ***************/

@@ -1,0 +1,190 @@
+.quiz_fields label.field_name, .quiz_fields input {
+    width: 100%;
+}
+
+input[type=file]:focus, input[type=checkbox]:focus, input[type=radio]:focus {
+    outline: none;
+}
+
+.quiz_fields label.field_name {
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+
+.quiz_fields input[type="text"] {
+    padding: 5px;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: #222222;
+}
+
+.buttons input.quiz_submit_btn {
+    margin: auto !important;
+    display: table;
+    background-color: #4cabe4;
+    color: #fff !important;
+    border: 0;
+    padding: 15px 20px;
+    font-size: 20px;
+    width: 100%;
+}
+
+.buttons .add-quiz-q {
+    margin: auto !important;
+    display: table;
+    background-color: #4cabe4;
+    color: #fff !important;
+    border: 0;
+    padding: 15px 20px;
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 10px !important;
+}
+
+.buttons .remove-quiz-q {
+    margin: auto !important;
+    display: table;
+    background-color: #4cabe4;
+    color: #fff !important;
+    border: 0;
+    padding: 15px 20px;
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 10px !important;
+    margin-left:20px !important;
+}
+
+.buttons {
+    /* display: inline-flex; */
+    padding: 0px 40%;
+    /* flex-direction: row-reverse; */
+}
+
+.button_flex {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.button_flex .remove-work-div {
+    margin-left: 20px !important;
+}
+
+.quiz_sec {
+    overflow: hidden;
+    margin-bottom: 5%;
+}
+
+.quiz_sec .quiz_image img {
+    width: 100%;
+    height: 100%;
+}
+
+.quiz_select_btn button:hover {
+    background-color: #2E79BD !important;
+    outline: none !important;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/************* CUSTOM RADIO BUTTON *******************/
+/* The container */
+.answer_lable {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.answer_sec .answer_lable input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.answer_sec .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.answer_sec .answer_lable:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.answer_sec .answer_lable input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.answer_sec .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.answer_sec .answer_lable input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.answer_sec .answer_lable .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+/* Hide the browser's default radio button */
+div.deactive{
+  display: none;
+}
+
+.result {
+  text-align: center;
+}
+
+.result .text h1 {
+    color: #3986c2;
+    font-weight: bold;
+}
+
+.result_page div#dataTables-example_wrapper .row div#dataTables-example_length, .result_page div#dataTables-example_wrapper .row div#dataTables-example_filter {
+    display: none !important;
+}
+
+.result_page div#dataTables-example_wrapper div#dataTables-example_info, .result_page div#dataTables-example_wrapper div#dataTables-example_paginate {
+    display: none;
+}

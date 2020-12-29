@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="work_exp_dynamic">
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					<div class="work-inner">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+					<div class="fields">
+					<label>Work Experience</label>
+					</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12">
+					<div class="fields">
+					<input type="text" name="job_title[]" placeholder="Job Title">
+					</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12">
+					<div class="fields">
+					<input type="text" name="job_company[]" placeholder="Company">
+					</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12">
+					<div class="fields">
+						<input type="text" name="job_location[]" placeholder="Location">
+						</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="fields">
+						<input type="number" name="job_phone[]" min="0" placeholder="Phone">
+						</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="fields">
+						From
+						<input type="date" name="job_from[]" placeholder="From">
+						</div>
+						</div>
+						<!--------I currently work here------->
+						<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="fields">
+						<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="fields">
+						To
+						<input type="date" class="job_to" name="job_to[]" placeholder="To">
+						</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="fields">
+						<label class="mycheck_box">
+						   <h6>I currently work here</h6>
+						   <input type="checkbox" class="c_work_here" name="c_work_here[]" value="Yes">
+						   <span class="check_box_mark"></span>
+						</label>
+						</div>
+						</div>
+						</div>
+						</div>
+						
+						
+						<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="fields">
+						<textarea name="role_descrip[]" placeholder="Role Description"></textarea>
+						</div>
+						</div>
+						<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="fields">
+						<ul>
+						<li><button type="button" class="remove-work-div" style="display: inline-block;">Remove</button></li>
+						<li><button type="button" class="add-work-div">Add More</button></li>
+						</ul>
+						</div>
+						</div>
+						</div>
+						
+					<div class="work-inner">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+					<div class="fields">
+					<label>Work Experience</label>
+					</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12">
+					<div class="fields">
+					<input type="text" name="job_title[]" placeholder="Job Title">
+					</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12">
+					<div class="fields">
+					<input type="text" name="job_company[]" placeholder="Company">
+					</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12">
+					<div class="fields">
+						<input type="text" name="job_location[]" placeholder="Location">
+						</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="fields">
+						<input type="number" name="job_phone[]" min="0" placeholder="Phone">
+						</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="fields">
+						From
+						<input type="date" name="job_from[]" placeholder="From">
+						</div>
+						</div>
+						<!--------I currently work here------->
+						<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="fields">
+						<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="fields">
+						To
+						<input type="date" class="job_to" name="job_to[]" placeholder="To">
+						</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="fields">
+						<label class="mycheck_box">
+						   <h6>I currently work here</h6>
+						   <input type="checkbox" class="c_work_here" name="c_work_here[]" value="Yes">
+						   <span class="check_box_mark"></span>
+						</label>
+						</div>
+						</div>
+						</div>
+						</div>
+						
+						
+						<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="fields">
+						<textarea name="role_descrip[]" placeholder="Role Description"></textarea>
+						</div>
+						</div>
+						<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="fields">
+						<ul>
+						<li><button type="button" class="remove-work-div" style="">Remove</button></li>
+						<li><button type="button" class="add-work-div">Add More</button></li>
+						</ul>
+						</div>
+						</div>
+						</div>
+						</div>
+</body>
+<footer>
+<script>
+	$(document).ready(function() {
+
+var max_fields = 10; //maximum input boxes allowed
+var wrapper = $(".work_exp_dynamic"); //Fields wrapper
+var html = $(".work_exp_dynamic").html();
+var x = 1; //initlal text box count
+
+$(document).on("click",".add-work-div",function(e) {
+// e.preventDefault();
+if(x < max_fields){ //max input box allowed
+x++; //text box increment
+$(wrapper).append(html); //add input box
+}
+});
+
+$(document).on("click",".remove-work-div", function(e){ //user click on remove text
+e.preventDefault();
+if (x>1) {
+
+$(this).closest('.work-inner').remove();
+x--;
+}
+
+});
+});
+</script>
+</footer>
+</html>

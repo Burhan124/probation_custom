@@ -1,0 +1,4 @@
+SELECT quiz.quiz_title, quiz.quiz_id FROM `report` 
+INNER JOIN qustion_answer ON qustion_answer.qust_id = report.qustion_id 
+INNER JOIN quiz ON quiz.quiz_id = report.quiz_id_sc
+WHERE report.user_id = 54 GROUP BY report.report_date

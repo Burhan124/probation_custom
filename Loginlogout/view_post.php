@@ -1,8 +1,19 @@
 <?php 
 // Going To create a DB conection
 include('includes/header.php');
-include 'Connectiondb/connection.php';
 $select_query = mysqli_query($conection,"SELECT * FROM `posts`");
+
+include ('Mianfunctionoops.php');
+$obj = new delete();
+
+if (isset($_GET['pst'])) {
+  $abc = $obj->deletePost($_GET);
+}
+
+
+
+
+
  ?>
 
 <body>
@@ -33,9 +44,11 @@ $message = $rows['p_author'];
 	<td><?php echo $discriptio; ?></td>
 	<td><?php echo $message; ?></td>
 	<td><a class="btn btn-primary btn-md" href="form.php?pst=<?php echo $post_id; ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"> EDIT</i>
+		<!-- <a class="btn btn-primary btn-md" href="form.php?pst=<?php echo $post_id; ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"> EDIT</i>  -->
 </a></td>
 	<!-- href=form.php?post_id=1 -->
-	<td><button class="btn btn-danger btn-md delete-post" id="<?php echo $post_id; ?>"><i class="fa fa-trash" aria-hidden="true"></i> DELETE</button></td>
+	<td><a class="btn btn-danger btn-md" href="view_post.php?pst=<?php echo $post_id; ?>"><i class="fa fa-trash" aria-hidden="true"></i> DELETE</i></a>
+		<button class="btn btn-danger btn-md delete-post" id="<?php echo $post_id; ?>"><i class="fa fa-trash" aria-hidden="true"></i> DELETE BY AJEX</button></td>
  
 </tr>
 <?php

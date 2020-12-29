@@ -23,8 +23,10 @@ if(isset($_POST['Submit_btn'])){
       'username2' => 'password2');
 
     /* Check and assign submitted Username and Password to new variable */
-    $Username = isset($_POST['Username']) ? $_POST['Username'] : '';
-    $Password = isset($_POST['Password']) ? $_POST['Password'] : '';
+
+    // $check = (condition) ? 'true':'false';
+    $Username = (isset($_POST['Username']) ) ? $_POST['Username'] : '';
+    $Password = (isset($_POST['Password']) ) ? $_POST['Password'] : '';
     /* Check Username and Password existence in defined array */
       // true             Regina Hahn
 

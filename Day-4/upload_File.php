@@ -1,22 +1,29 @@
-<?php
+<?phpheaders
 
 if ($_SERVER['REQUEST_METHOD'] =='POST') 
 {
 	$folder = "images";
 	$randomNumber = rand(15,35);
 	$filepath = $folder.'/'.$randomNumber.$_FILES['upload_file']['name'];
-	$imageFileType = strtolower(pathinfo($filepath,PATHINFO_EXTENSION));
-	// $folder = 
+	$imageFileType = strtolower(pathinfo($filepath,PATHINFO_EXTENSION)); 
 
-	if (empty($_FILES['upload_file']['name'])) {echo "File is required"; }
-	elseif (file_exists($filepath))	{echo "File already exists";}
-	elseif ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif"){ echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";}
+	if (empty($_FILES['upload_file']['name'])) {
+		echo "File is required"; 
+	}
+	elseif (file_exists($filepath))	{
+		echo "File already exists";
+	}
+	elseif ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") { 
+		echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+	}
 	else { 
-	if (move_uploaded_file($_FILES["upload_file"]["tmp_name"], $filepath))
-	{ echo "The file ". htmlspecialchars( basename( $_FILES["upload_file"]["name"])). " has been uploaded.";
-    } 
-    else {echo "Sorry, there was an error uploading your file."; }
-}
+		if (move_uploaded_file($_FILES["upload_file"]["tmp_name"], $filepath)) { 
+			echo "The file ". htmlspecialchars( basename( $_FILES["upload_file"]["name"])). " has been uploaded.";
+	} 
+	    else {
+	    	echo "Sorry, there was an error uploading your file."; 
+	    }
+	}
 }
 
 /*function file_newname($path,  $filename)

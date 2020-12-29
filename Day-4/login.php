@@ -1,8 +1,6 @@
 <?php
-
-
- session_start(); /* Starts the session */
- var_dump($_SESSION);
+session_start(); /* Starts the session */
+var_dump($_SESSION);
 if(!isset($_SESSION['Username'])){
 header("location:Learning-4.php");
 exit;
